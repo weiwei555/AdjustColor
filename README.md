@@ -12,7 +12,15 @@ This project uses mainly knowledges of rgb colorspace, color theorem, contour fi
 
 Below are some sample input image, parameters, output image for referencing:
 
-input image -> parameters -> output image
+parameters:
+```
+image_path = "input/input3.jpg"
+output_path = "output/output3.jpg"
+lower_bound = 50
+color_bound_l = 70
+color_bound_h = 255
+upper_bound = 150
+```
 
-<img src="https://github.com/weiwei555/AdjustColor/blob/main/input/input3.jpg" alt="input image" width="200"> <img src="https://github.com/weiwei555/AdjustColor/blob/main/output/output3.jpg" alt="output image" width="200">
+<img src="https://github.com/weiwei555/AdjustColor/blob/main/input/input3.jpg" alt="input image" width="400"> <img src="https://github.com/weiwei555/AdjustColor/blob/main/output/output3.jpg" alt="output image" width="400">
 
