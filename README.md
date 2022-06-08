@@ -81,5 +81,19 @@ contours = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIM
 contours = imutils.grab_contours(contours)
 ```
 
+Then, we process each patch among all the patches we've found. This step aims to get the patch shape (and all the pixel positions in this patch) by processing the contours we've found.
 
+```
+for i in range(len(contours)):
+        # Create a mask image that contains the contour filled in
+        cimg = np.zeros_like(image)
+        cv2.drawContours(cimg, contours, i, color=(255, 255, 255), thickness=-6)
+
+        # Find the corresponding position of a patch we want to modify
+        pts = np.where(cimg == (255, 255, 255))
+
+        # Get all the intensities on all pixels in this patch
+        intensities = image[pts[0], pts[1]]
+        processPatch(pts)
+```
 
