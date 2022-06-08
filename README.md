@@ -55,7 +55,7 @@ upper_bound = 150
 ## Technique explaination
 This project mainly uses python and openCV. The thought behind is to extract the darkest patches and the brightest patches of a painting respectively, then give them different colors based on their original color.
 
-# To extract the darkest/lightest patches:
+### To extract the darkest/brightest patches:
 We need to turn the image into grayscale and blur it like this:
 
 ```
@@ -72,6 +72,14 @@ thresh = cv2.threshold(blurred, lower_bound, 150, cv2.THRESH_BINARY_INV)[1]
 process(thresh, image)
 thresh = cv2.threshold(blurred, upper_bound, 255, cv2.THRESH_BINARY)[1]
 process(thresh, image)
+```
+
+
+The next important step is to draw and grab contours around these patches, so that we can really grab the contents inside the patches and modify them later:
+```
+contours = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL,
+                                cv2.CHAIN_APPROX_SIMPLE)
+contours = imutils.grab_contours(contours)
 ```
 
 
