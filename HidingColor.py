@@ -6,11 +6,11 @@ import numpy as np
 import imutils
 import cv2
 
-image_path = "input/input6.jpg"
-output_path = "output/output6.jpg"
-lower_bound = 70
-color_bound_l = 80
-color_bound_h = 136
+image_path = "input/input3.jpg"
+output_path = "output/output3.jpg"
+lower_bound = 50
+color_bound_l = 70
+color_bound_h = 255
 upper_bound = 150
 
 def processPatch(pts):
