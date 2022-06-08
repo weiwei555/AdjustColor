@@ -39,7 +39,7 @@ upper_bound = 150
 <img src="https://github.com/weiwei555/AdjustColor/blob/main/input/input3.jpg" alt="input image" width="400"> <img src="https://github.com/weiwei555/AdjustColor/blob/main/output/output3_2.jpg" alt="output image" width="400">
 
 ### Image example 2
-parameters 2:
+parameters 1:
 ```
 image_path = "input/input6.jpg"
 output_path = "output/output6.jpg"
@@ -50,6 +50,20 @@ upper_bound = 150
 ```
 
 <img src="https://github.com/weiwei555/AdjustColor/blob/main/input/input6.jpg" alt="input image" width="400"> <img src="https://github.com/weiwei555/AdjustColor/blob/main/output/output6.jpg" alt="output image" width="400">
+
+
+### Image example 3
+parameters 1:
+```
+image_path = "input/input7.jpg"
+output_path = "output/output7.jpg"
+lower_bound = 70
+color_bound_l = 20
+color_bound_h = 136
+upper_bound = 150
+```
+
+<img src="https://github.com/weiwei555/AdjustColor/blob/main/input/input7.jpg" alt="input image" width="300"> <img src="https://github.com/weiwei555/AdjustColor/blob/main/output/output7.jpg" alt="output image" width="300">
 
 
 ## Techniques explaination
