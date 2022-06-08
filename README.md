@@ -12,4 +12,4 @@ This project uses mainly knowledges of rgb colorspace, color theorem, contour fi
 
 Below are some sample input image, parameters, output image for referencing:
 
-![Input image1](https://github.com/weiwei555/AdjustColor/blob/main/input/input3.jpg| width=100)
+![Input image1](https://github.com/weiwei555/AdjustColor/blob/main/input/input3.jpg | width=100px)
