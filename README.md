@@ -38,18 +38,6 @@ upper_bound = 150
 <img src="https://github.com/weiwei555/AdjustColor/blob/main/input/input3.jpg" alt="input image" width="400"> <img src="https://github.com/weiwei555/AdjustColor/blob/main/output/output3_2.jpg" alt="output image" width="400">
 
 ### Image example 2
-parameters 1:
-```
-image_path = "input/input3.jpg"
-output_path = "output/output3.jpg"
-lower_bound = 50
-color_bound_l = 70
-color_bound_h = 255
-upper_bound = 150
-```
-
-<img src="https://github.com/weiwei555/AdjustColor/blob/main/input/input3.jpg" alt="input image" width="400"> <img src="https://github.com/weiwei555/AdjustColor/blob/main/output/output3.jpg" alt="output image" width="400">
-
 parameters 2:
 ```
 image_path = "input/input6.jpg"
