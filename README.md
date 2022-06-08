@@ -22,3 +22,6 @@ color_bound_l = 70
 color_bound_h = 255
 upper_bound = 150
 <img src="https://github.com/weiwei555/AdjustColor/blob/main/output/output3.jpg" alt="output image" width="200">
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+<img src="https://github.com/weiwei555/AdjustColor/blob/main/input/input3.jpg" alt="input image" width="200">  |  <img src="https://github.com/weiwei555/AdjustColor/blob/main/output/output3.jpg" alt="output image" width="200">
