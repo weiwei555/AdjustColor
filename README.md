@@ -77,8 +77,7 @@ process(thresh, image)
 
 The next important step is to draw and grab contours around these patches, so that we can really grab the contents inside the patches and modify them later:
 ```
-contours = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL,
-                                cv2.CHAIN_APPROX_SIMPLE)
+contours = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 contours = imutils.grab_contours(contours)
 ```
 
