@@ -1,6 +1,7 @@
 # AdjustColor
 CSE 455 final project - a basic color adjuster based on values on a painting
 Owner: Wei Wu (wuwei33)
+
 Paintings used as examples are credited to: @Zeen Chin, @weng weng chim
 
 ## Introduction
