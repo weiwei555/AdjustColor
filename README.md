@@ -97,3 +97,10 @@ for i in range(len(contours)):
         processPatch(pts)
 ```
 
+Finally, we use our algorithm inside processPatch(pts) to change the colors inside each patch, and save it as the output.
+
+For the algorithm which chooses color, we try to change its hue by minimizing the largest component among R,G,B and make addition to the smaller components among them. Also, we handled the saturation of the colors so that they are increased but not too different from the original one.
+
+To make a transition between the patches with changed color and the unchanged one, we decrease the number of colored pixels at the bottom of each patch. This can be improved in the future by recognizing where the transition with strongest comparisons happens and decrease number of colored pixels at that direction.
+
+A brush function is also included in HidingColor.py. This is a try that apply the figure of a brush to the painting and will be able to increase textures of each patch randomly in the future, after further implementation.
