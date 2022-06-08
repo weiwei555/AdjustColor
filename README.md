@@ -10,6 +10,7 @@ Youtube video for introduction (3 mins):
 Paintings used as examples are credited to artists: @Zeen Chin, @weng weng chim
 
 
+
 ## Introduction
 Welcome to AdjustColor!
 
@@ -72,6 +73,7 @@ upper_bound = 150
 ```
 
 <img src="https://github.com/weiwei555/AdjustColor/blob/main/input/input7.jpg" alt="input image" width="300"> <img src="https://github.com/weiwei555/AdjustColor/blob/main/output/output7.jpg" alt="output image" width="300">
+
 
 
 
