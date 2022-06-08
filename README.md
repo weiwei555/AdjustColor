@@ -49,3 +49,29 @@ upper_bound = 150
 ```
 
 <img src="https://github.com/weiwei555/AdjustColor/blob/main/input/input6.jpg" alt="input image" width="400"> <img src="https://github.com/weiwei555/AdjustColor/blob/main/output/output6.jpg" alt="output image" width="400">
+
+
+## Technique explaination
+This project mainly uses python and openCV. The thought behind is to extract the darkest patches and the brightest patches of a painting respectively, then give them different colors based on their original color.
+
+# To extract the darkest/lightest patches:
+We need to turn the image into grayscale and blur it like this:
+
+```
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+blurred = cv2.GaussianBlur(gray, (11, 11), 0)
+```
+
+Then we can use the grab_contour function provided by openCV to do extractions. Notice that different parameters are needed for extracting darkest and brightest patches. Here, we mainly use the 2 parameters given by user: lower_bound, upper_bound.
+lower_bound: pixels with value less than this bound won't be extracted into lowest set
+upper_bound: pixels with value more than this bound won't be extracted into brightest set
+
+```
+thresh = cv2.threshold(blurred, lower_bound, 150, cv2.THRESH_BINARY_INV)[1]
+process(thresh, image)
+thresh = cv2.threshold(blurred, upper_bound, 255, cv2.THRESH_BINARY)[1]
+process(thresh, image)
+```
+
+
+
