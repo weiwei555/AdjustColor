@@ -1,20 +1,21 @@
 # import the necessary packages
 import random
+
 from skimage import measure
 import numpy as np
 import imutils
 import cv2
 
-image_path = "input/input7.jpg"
-output_path = "output/output7.jpg"
-lower_bound = 50
-color_bound_l = 50
-color_bound_h = 140
+image_path = "input/input6.jpg"
+output_path = "output/output6.jpg"
+lower_bound = 70
+color_bound_l = 80
+color_bound_h = 136
 upper_bound = 150
 
 def processPatch(pts):
     intensities = image[pts[0], pts[1]]
-    
+
     total = len(pts[0])
     down = total/4*3
     for j in range(len(pts[0])):
@@ -39,8 +40,8 @@ def processPatch(pts):
 
         # blue, green, red?
         if (max_v - min_v) > 10 and max(r1,g1,b1) > color_bound_l and max(r1,g1,b1) < color_bound_h:
-            r = r*0.7* ratio+r1*0.3+10
-            g = g*0.7* ratio+g1*0.3+10
+            r = r*0.9* ratio+r1*0.3+10
+            g = g*0.4* ratio+g1*0.7+10
             b = b*0.7* ratio+b1*0.3+10
             r,g,b = overflow(r,g,b)
             rgb = [r,g,b]
@@ -109,25 +110,6 @@ def comparison(r,g,b,min_v,max_v):
             b += 0.3*r
             g += 0.5*r
         r = 0.4*r
-    return r,g,b
-
-def moderate(r,g,b,min_v,max_v):
-    change = random.randint(-1,1)
-    if max_v == g:
-        if min_v == r:
-            b += b * change
-        else:
-            r += r * change
-    if max_v == b:
-        if min_v == g:
-            r += r * change
-        else:
-            g += g * change
-    if max_v == r:
-        if min_v == g:
-            b += b * change
-        else:
-            g += g * change
     return r,g,b
 
 def process_brush(image):
@@ -219,7 +201,7 @@ def process(thresh, image):
         # Get all the intensities on all pixels in this patch
         intensities = image[pts[0], pts[1]]
         processPatch(pts)
-        
+
         #cv2.drawContours(cimg, contours, i, color=lst_intensities[i], thickness=-1)
 
     # draw out the contours we've found
@@ -232,6 +214,6 @@ main(image)
 
 # show the output image
 cv2.imwrite(output_path, image)
-# cv2.imwrite("output/contour.jpg", contour_img)
+#cv2.imwrite("output/contour.jpg", contour_img)
 #cv2.imwrite("output/mask.jpg", mask)
 #cv2.imwrite("output/cimg.jpg", cimg)
